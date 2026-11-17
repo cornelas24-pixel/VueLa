@@ -50,6 +50,13 @@ Para usarla desde cualquier celular (la cámara y el GPS piden HTTPS), el servid
 - En el plan gratis el servicio se duerme tras un rato sin visitas: la primera carga después puede tardar cerca de un minuto.
 - En el celular: abrir la dirección en Chrome → menú → **Instalar app** (o *Agregar a pantalla de inicio*).
 
+### App Android (.apk)
+
+- Descarga: <https://vuela-app.onrender.com/descargas/VueLa.apk> (en el celular hay que permitir «instalar apps desconocidas» para el navegador).
+- Se generó con [PWABuilder](https://www.pwabuilder.com) (*Trusted Web Activity*): el .apk abre la app publicada a pantalla completa, así que **los cambios que se publiquen en Render se ven solos**, sin generar otro .apk.
+- `.well-known/assetlinks.json` vincula el .apk con la página (sin él, la app se abre con una barra de navegador). El servidor lo sirve en `/.well-known/assetlinks.json`.
+- La llave de firma (`android/signing.keystore` y `android/signing-key-info.txt`) **no se sube a GitHub**; guárdenla: hace falta para firmar una versión nueva del .apk con la misma firma (ver `android/LEEME.txt`).
+
 ## Cómo funciona
 
 - **Inicio de sesión:** el botón de perfil (arriba a la derecha) abre **Iniciar sesión / Crear cuenta**; con sesión abierta muestra **Mi cuenta** (correo, rol, miembro desde, vencimiento de la sesión, dispositivos con sesión y el resumen de sus avistamientos) y **Cerrar sesión**.

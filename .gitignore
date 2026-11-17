@@ -6,3 +6,5 @@ server/.env
 db/respaldo/*
 !db/respaldo/.gitkeep
 *.log
+# Llave de firma del .apk (secreta) y archivos de Android: no se suben
+android/

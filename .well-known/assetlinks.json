@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.onrender.vuela_app.twa",
+        "sha256_cert_fingerprints": ["77:79:EC:01:31:72:82:80:BE:2B:4B:5F:7B:5A:42:31:27:62:8C:01:3E:AB:7A:DB:BE:8C:2B:A7:6F:AF:AE:A8"]
+      }
+    }]

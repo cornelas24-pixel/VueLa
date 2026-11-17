@@ -417,6 +417,11 @@ app.use('/api', (_req, res) => res.status(404).json({ error: 'Ruta de la API no 
 // ---------------------------------------------------------------------------
 // Archivos de la app (nunca se sirven server/ ni db/)
 // ---------------------------------------------------------------------------
+// Vínculo con la app Android (.apk de PWABuilder): con este archivo Android confía en
+// que el .apk y la página son del mismo dueño y la abre a pantalla completa, sin barra.
+app.get('/.well-known/assetlinks.json', (_req, res) =>
+  res.sendFile(path.join(RAIZ, '.well-known', 'assetlinks.json'), err => err && res.status(404).end()));
+
 app.use((req, res, next) => {
   if (/^\/(server|db)(\/|$)/i.test(decodeURIComponent(req.path))) return res.status(404).end();
   next();
