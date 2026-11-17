@@ -1,0 +1,8 @@
+# Dependencias y secretos: nunca se suben
+node_modules/
+.env
+server/.env
+# Respaldos de la base (traen datos de usuarios) y bitácoras
+db/respaldo/*
+!db/respaldo/.gitkeep
+*.log

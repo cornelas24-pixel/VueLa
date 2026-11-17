@@ -1,0 +1,19 @@
+{
+  "name": "vuela-server",
+  "version": "1.0.0",
+  "description": "API de VueLa: conecta la PWA con la base de datos PostgreSQL (vuela_db) y sirve la app en http://localhost:3000",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "pg": "8.13.1"
+  }
+}
